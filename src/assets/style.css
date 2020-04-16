@@ -1,0 +1,10 @@
+.nav-item .nav-link {
+    font-weight: normal;
+    color:#6c757d;
+}
+
+a #PopoverMegaMenu.header-megamenu.nav > li > .nav-link:hover{
+    text-decoration: none important;
+
+
+}

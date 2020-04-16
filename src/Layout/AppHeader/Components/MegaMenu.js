@@ -49,7 +49,7 @@ class MegaMenu extends React.Component {
                             {/* <FontAwesomeIcon className="ml-2 opacity-5" icon={faAngleDown}/> */}
                         </NavLink>
                     </NavItem>
-                    {/* <Popover className="rm-max-width" placement="bottom-start" fade={false} trigger="legacy" isOpen={this.state.popoverOpen} target="PopoverMegaMenu"
+                    <Popover className="rm-max-width" placement="bottom-start" fade={false} trigger="legacy" isOpen={this.state.popoverOpen} target="PopoverMegaMenu"
                              toggle={this.toggle}>
                         <div className="dropdown-mega-menu">
                             <div className="grid-menu grid-menu-3col">
@@ -141,7 +141,7 @@ class MegaMenu extends React.Component {
                                 </Row>
                             </div>
                         </div>
-                    </Popover> */}
+                    </Popover>
                     <UncontrolledButtonDropdown nav inNavbar>
                         <DropdownToggle nav>
                             <div className="nav-link-icon pe-7s-settings"></div>

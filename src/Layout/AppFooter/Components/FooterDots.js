@@ -122,19 +122,21 @@ class FooterDots extends React.Component {
                 <div className="footer-dots">
                     <a  href="https://colorlib.com/"  onClick={ this.toggle1} className="dot-btn-wrapper"
                        id="PopoverFooter-1">
+                         Call Center
                         <i className="dot-btn-icon lnr-bullhorn icon-gradient bg-mean-fruit"/>
                         <div className="badge badge-dot badge-abs badge-dot-sm badge-danger">Notifications</div>
                     </a>
                     <div className="dots-separator"/>
                     <a href="https://colorlib.com/" onClick={this.toggle2} className="dot-btn-wrapper"
                        id="PopoverFooter-2">
+                           Alerts
                         <i className="dot-btn-icon lnr-earth icon-gradient bg-happy-itmeo"/>
                     </a>
                     <div className="dots-separator"/>
                     <a href="https://colorlib.com/" onClick={this.toggle3} className="dot-btn-wrapper"
                        id="PopoverFooter-3">
                         <i className="dot-btn-icon lnr-pie-chart icon-gradient bg-love-kiss"/>
-                        <div className="badge badge-dot badge-abs badge-dot-sm badge-warning">Notifications</div>
+                        <div className="">Notifications</div>
                     </a>
 
                     <Popover className="popover-custom popover-custom-xl" container=".app-container" hideArrow fade={false} trigger="legacy" placement="top-start"

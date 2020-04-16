@@ -5,7 +5,7 @@ import { IoIosGrid, IoIosNotificationsOutline, IoIosAnalytics } from "react-icon
 
 import {
     UncontrolledDropdown, DropdownToggle, DropdownMenu,
-    Nav, Col, Row, Button, NavItem, DropdownItem
+    Nav, Col, Row, Button, NavItem, DropdownItem,NavLink,Popover,UncontrolledButtonDropdown
 } from 'reactstrap';
 
 import {
@@ -29,6 +29,7 @@ import city3 from '../../../assets/utils/images/dropdown-header/city3.jpg';
 import Flag from 'react-flagkit';
 
 import Tabs from 'react-responsive-tabs';
+
 
 // Dropdown Tabs Content
 import ChatExample from './TabsContent/ChatExample';
@@ -85,15 +86,109 @@ class HeaderDots extends React.Component {
     render() {
         return (
             <Fragment>
-                <div className="header-dots">
-                    <UncontrolledDropdown>
-                        <DropdownToggle className="p-0 mr-2" color="link">
-                            <div className="icon-wrapper icon-wrapper-alt rounded-circle">
-                                 Display
-                                <div className="icon-wrapper-bg bg-primary"/>
-                                <IoIosGrid color="#3f6ad8" fontSize="23px"/>
+                <nav className="header-megamenu nav">
+     
+                <NavItem>
+                        <NavLink href="#" onClick={this.toggle} id="PopoverMegaMenu">
+                            <i className="nav-link-icon pe-7s-gift"> </i>
+                            Display
+                            {/* <FontAwesomeIcon className="ml-2 opacity-5" icon={faAngleDown}/> */}
+                        </NavLink>
+                    </NavItem>
+                    {/* <Popover className="rm-max-width" placement="bottom-start" fade={false} trigger="legacy" isOpen={this.state.popoverOpen} target="PopoverMegaMenu"
+                             toggle={this.toggle}>
+                        <div className="dropdown-mega-menu">
+                            <div className="grid-menu grid-menu-3col">
+                                <Row className="no-gutters">
+                                    <Col xl="4" sm="6">
+                                        <Nav vertical>
+                                            <NavItem className="nav-item-header">
+                                                Overview
+                                            </NavItem>
+                                            <NavItem>
+                                                <NavLink href="#">
+                                                    <i className="nav-link-icon lnr-inbox"> </i>
+                                                    <span>Contacts</span>
+                                                </NavLink>
+                                            </NavItem>
+                                            <NavItem>
+                                                <NavLink href="#">
+                                                    <i className="nav-link-icon lnr-book"> </i>
+                                                    <span>Incidents</span>
+                                                    <div className="ml-auto badge badge-pill badge-danger">5</div>
+                                                </NavLink>
+                                            </NavItem>
+                                            <NavItem>
+                                                <NavLink href="#">
+                                                    <i className="nav-link-icon lnr-picture"> </i>
+                                                    <span>Companies</span>
+                                                </NavLink>
+                                            </NavItem>
+                                            <NavItem>
+                                                <NavLink disabled href="#">
+                                                    <i className="nav-link-icon lnr-file-empty"> </i>
+                                                    <span>Dashboards</span>
+                                                </NavLink>
+                                            </NavItem>
+                                        </Nav>
+                                    </Col>
+                                    <Col xl="4" sm="6">
+                                        <Nav vertical>
+                                            <NavItem className="nav-item-header">
+                                                Favourites
+                                            </NavItem>
+                                            <NavItem>
+                                                <NavLink href="#">Reports Conversions</NavLink>
+                                            </NavItem>
+                                            <NavItem>
+                                                <NavLink href="#">
+                                                    Quick Start
+                                                    <div className="ml-auto badge badge-success">New</div>
+                                                </NavLink>
+                                            </NavItem>
+                                            <NavItem>
+                                                <NavLink href="#">
+                                                    Users &amp; Groups
+                                                </NavLink>
+                                            </NavItem>
+                                            <NavItem>
+                                                <NavLink href="#">
+                                                    Proprieties
+                                                </NavLink>
+                                            </NavItem>
+                                        </Nav>
+                                    </Col>
+                                    <Col xl="4" sm="6">
+                                        <Nav vertical>
+                                            <NavItem className="nav-item-header">
+                                                Sales &amp; Marketing
+                                            </NavItem>
+                                            <NavItem>
+                                                <NavLink href="#">
+                                                    Queues
+                                                </NavLink>
+                                            </NavItem>
+                                            <NavItem>
+                                                <NavLink href="#">Resource Groups</NavLink>
+                                            </NavItem>
+                                            <NavItem>
+                                                <NavLink href="#">
+                                                    Goal Metrics
+                                                    <div className="ml-auto badge badge-warning">3</div>
+                                                </NavLink>
+                                            </NavItem>
+                                            <NavItem>
+                                                <NavLink href="#">
+                                                    Campaigns
+                                                </NavLink>
+                                            </NavItem>
+                                        </Nav>
+                                    </Col>
+                                </Row>
                             </div>
-                        </DropdownToggle>
+                        </div>
+                    </Popover> */}
+                        
                         {/* <DropdownMenu right className="dropdown-menu-xl rm-pointers">
                             <div className="dropdown-menu-header">
                                 <div className="dropdown-menu-header-inner bg-plum-plate">
@@ -169,17 +264,15 @@ class HeaderDots extends React.Component {
                                 </NavItem>
                             </Nav>
                         </DropdownMenu> */}
-                    </UncontrolledDropdown>
-                    <UncontrolledDropdown>
-                        <DropdownToggle className="p-0 mr-2" color="link">
-                            <div className="icon-wrapper icon-wrapper-alt rounded-circle">
-                                <div className="icon-wrapper-bg bg-danger"/>
-                       
-                                <IoIosNotificationsOutline color="#d92550" fontSize="23px" />
-                                <div className="badge badge-dot badge-dot-sm badge-danger">Notifications</div>
-                            </div>
+
+<UncontrolledButtonDropdown nav inNavbar>
+                        <DropdownToggle nav>
+                            <div className="nav-link-icon pe-7s-settings"></div>
+                            Notifications
+                            {/* <FontAwesomeIcon className="ml-2 opacity-5" icon={faAngleDown}/> */}
                         </DropdownToggle>
-                        <DropdownMenu right className="dropdown-menu-xl rm-pointers">
+                   
+                      <DropdownMenu right className="dropdown-menu-xl rm-pointers">
                             <div className="dropdown-menu-header mb-0">
                                 <div className="dropdown-menu-header-inner bg-deep-blue">
                                     <div className="menu-header-image opacity-1"
@@ -204,25 +297,27 @@ class HeaderDots extends React.Component {
                                 </NavItem>
                             </Nav>
                         </DropdownMenu>
-                    </UncontrolledDropdown>
-                    <UncontrolledDropdown>
-                        <DropdownToggle className="p-0 mr-2" color="link">
-                            <div className="icon-wrapper icon-wrapper-alt rounded-circle">
-                                <div className="icon-wrapper-bg bg-focus"/>
-                                <div className="language-icon">
-                                    <Flag className="mr-3 opacity-8" country="DE" size="40"/>
-                                </div>
-                            </div>
+                        
+                    </UncontrolledButtonDropdown>
+                  
+                    <UncontrolledButtonDropdown nav inNavbar>
+                        <DropdownToggle nav>
+                            <div className="nav-link-icon pe-7s-settings"></div>
+                            Languages
+                            {/* <FontAwesomeIcon className="ml-2 opacity-5" icon={faAngleDown}/> */}
                         </DropdownToggle>
+                   
                         <DropdownMenu right className="rm-pointers">
                             <div className="dropdown-menu-header">
+
                                 <div className="dropdown-menu-header-inner pt-4 pb-4 bg-focus">
+                               
                                     <div className="menu-header-image opacity-05"
                                    
                                          style={{
                                              backgroundImage: 'url(' + city2 + ')'
                                          }}
-                                    />          Language Translator
+                                    />    
                                     <div className="menu-header-content text-center text-white">
                                         <h6 className="menu-header-subtitle mt-0">Choose Language</h6>
                                     </div>
@@ -233,20 +328,20 @@ class HeaderDots extends React.Component {
                                 <Flag className="mr-3 opacity-8" country="US"/>
                                 USA
                             </DropdownItem>
-                            <DropdownItem>
+                            {/* <DropdownItem>
                                 <Flag className="mr-3 opacity-8" country="CH"/>
                                 Switzerland
                             </DropdownItem>
                             <DropdownItem>
                                 <Flag className="mr-3 opacity-8" country="FR"/>
                                 France
-                            </DropdownItem>
+                            </DropdownItem> */}
                             <DropdownItem>
                                 <Flag className="mr-3 opacity-8" country="ES"/>
                                 Spain
                             </DropdownItem>
                             <DropdownItem divider/>
-                            <DropdownItem header>Others</DropdownItem>
+                            {/* <DropdownItem header>Others</DropdownItem>
                             <DropdownItem active>
                                 <Flag className="mr-3 opacity-8" country="DE"/>
                                 Germany
@@ -254,16 +349,18 @@ class HeaderDots extends React.Component {
                             <DropdownItem>
                                 <Flag className="mr-3 opacity-8" country="IT"/>
                                 Italy
-                            </DropdownItem>
+                            </DropdownItem> */}
                         </DropdownMenu>
-                    </UncontrolledDropdown>
-                    <UncontrolledDropdown>
-                        <DropdownToggle className="p-0" color="link">
-                            <div className="icon-wrapper icon-wrapper-alt rounded-circle">
-                                <div className="icon-wrapper-bg bg-success"/>
-                                <IoIosAnalytics color="#3ac47d" fontSize="23px" />
-                            </div>
+                        
+                    </UncontrolledButtonDropdown>
+                  
+                    <UncontrolledButtonDropdown nav inNavbar>
+                        <DropdownToggle nav>
+                            <div className="nav-link-icon pe-7s-settings"></div>
+                            Patients Online
+                            {/* <FontAwesomeIcon className="ml-2 opacity-5" icon={faAngleDown}/> */}
                         </DropdownToggle>
+                   
                         <DropdownMenu right className="dropdown-menu-xl rm-pointers">
                             <div className="dropdown-menu-header">
                                 <div className="dropdown-menu-header-inner bg-premium-dark">
@@ -337,8 +434,10 @@ class HeaderDots extends React.Component {
                                 </NavItem>
                             </Nav>
                         </DropdownMenu>
-                    </UncontrolledDropdown>
-                </div>
+                        
+                    </UncontrolledButtonDropdown>
+                
+                </nav>
             </Fragment>
         )
     }

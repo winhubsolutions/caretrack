@@ -42,72 +42,7 @@ export default class DataTableCustomComps extends React.Component {
                         />
                     </div>
                     <Row>
-                        <Col md="12">
-                            <Card className="main-card mb-3">
-                                <CardBody>
-                                    <ReactTable
-                                        data={data}
-                                        columns={[{
-                                            columns: [{
-                                                Header: 'First Name',
-                                                accessor: 'firstName'
-                                            }, {
-                                                Header: 'Last Name',
-                                                id: 'lastName',
-                                                accessor: d => d.lastName
-                                            }]
-                                        }, {
-                                            columns: [{
-                                                Header: 'Profile Progress',
-                                                accessor: 'progress',
-                                                Cell: row => (
-
-
-                                                    <div className="progress-bar-sm progress"
-                                                         style={{
-                                                             width: '100%',
-                                                             backgroundColor: '#dadada',
-                                                         }}
-                                                    >
-                                                        <div className="progress-bar"
-                                                             style={{
-                                                                 width: `${row.value}%`,
-                                                                 backgroundColor: row.value > 66 ? '#3ac47d'
-                                                                     : row.value > 33 ? '#fd7e14'
-                                                                         : '#d92550',
-                                                                 borderRadius: '2px',
-                                                                 transition: 'all .2s ease-out'
-                                                             }}
-                                                        />
-                                                    </div>
-                                                )
-                                            }, {
-                                                Header: 'Status',
-                                                accessor: 'status',
-                                                Cell: row => (
-                                                    <span>
-                                                    <span style={{
-                                                        color: row.value === 'relationship' ? '#d92550'
-                                                            : row.value === 'complicated' ? '#fd7e14'
-                                                                : '#3ac47d',
-                                                        transition: 'all .3s ease'
-                                                    }}>
-                                                      &#x25cf;
-                                                    </span> {
-                                                        row.value === 'relationship' ? 'In a relationship'
-                                                            : row.value === 'complicated' ? `It's complicated`
-                                                            : 'Single'
-                                                    }
-                                                </span>
-                                                )
-                                            }]
-                                        }]}
-                                        defaultPageSize={10}
-                                        className="-striped -highlight"
-                                    />
-                                </CardBody>
-                            </Card>
-                        </Col>
+                      
                         <Col md="12">
                             <Card className="main-card mb-3">
                                 <CardBody>
@@ -148,15 +83,42 @@ export default class DataTableCustomComps extends React.Component {
                                                     )
                                                 },
                                                 {
-                                                    Header: 'Age',
+                                                    Header: 'Scheduled Time',
                                                     accessor: 'age'
                                                 },
                                                 {
-                                                    Header: 'Visits',
+                                                    Header: 'Provider',
                                                     accessor: 'visits'
                                                 },
                                                 {
-                                                    Header: 'Popular Tag',
+                                                    Header: 'Reason',
+                                                    accessor: 'lastName'
+                                                },
+                                                {
+                                                    Header: 'Office',
+                                                    accessor: 'lastName'
+                                                },
+                                                {
+                                                    Header: 'Exam Room',
+                                                    accessor: 'lastName'
+                                                },
+                                                {
+                                                    Header: 'Address',
+                                                    accessor: 'lastName'
+                                                },
+                                                {
+                                                    Header: 'Appointment',
+                                                    accessor: 'lastName'
+                                                },{
+                                                    Header: 'Billing Status',
+                                                    accessor: 'lastName'
+                                                },
+                                                {
+                                                    Header: 'Profile',
+                                                    accessor: 'lastName'
+                                                },
+                                                {
+                                                    Header: 'Actions',
                                                     accessor: 'lastName'
                                                 },
                                             ]

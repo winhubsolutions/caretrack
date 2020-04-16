@@ -1,10 +1,10 @@
 {
-  "name": "architectui-react-pro",
+  "name": "caretrack-react-app",
   "version": "1.5.0",
   "private": true,
-  "description": "ArchitectUI - Bootstrap 4 Premium Admin Dashboard Template",
-  "author": "DashboardPack.com",
-  "homepage": "https://winhubsolutions.github.io/caretrack/",
+  "description": "Care Track ",
+  "author": "winhubsolutions.in",
+  "homepage": "https://winhubsolutions.github.io/caretrack",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/winhubsolutions/caretrack"
@@ -22,6 +22,7 @@
     "apexcharts": "^3.8.6",
     "aphrodite": "^2.4.0",
     "bootstrap": "^4.3.1",
+    "build": "^0.1.4",
     "chart.js": "^2.8.0",
     "chartist": "^0.10.1",
     "chroma-js": "^2.0.6",
@@ -147,6 +148,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start",
     "deploy": "gh-pages -d build",
     "predeploy": "npm run build"
   },
