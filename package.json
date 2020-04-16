@@ -4,10 +4,10 @@
   "private": true,
   "description": "ArchitectUI - Bootstrap 4 Premium Admin Dashboard Template",
   "author": "DashboardPack.com",
-  "homepage": "https://github.com/winhubsolutions/caretrack.git",
+  "homepage": "https://winhubsolutions.github.io/caretrack/",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/winhubsolutions/caretrack.git"
+    "url": "git+https://github.com/winhubsolutions/caretrack"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.11.2",
@@ -147,7 +147,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "predeploy": "npm run build"
   },
   "eslintConfig": {
     "extends": "react-app"
